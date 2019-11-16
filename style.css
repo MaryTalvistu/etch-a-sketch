@@ -1,0 +1,38 @@
+body, html {
+    margin: 30px;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+  }
+
+
+#container {
+    display: grid;
+    grid-template-columns: repeat(16, 40px);
+    grid-template-rows: repeat(16, 40px);
+    justify-content: center;
+}
+
+.square {
+    border: thin solid lightseagreen;
+    height: 40px;
+    width: 40px;
+}
+
+button {
+    background-color: coral;
+    border: none;
+    border-radius: 8px;
+    color: lavender;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+  }
+
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: lightseagreen;
+  }
