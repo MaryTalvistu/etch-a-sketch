@@ -18,7 +18,7 @@ jobs:
       
       - name: Send success notification to Gmail
         if: always() 
-        uses: actions/checkout@v2
+        uses: dawidd6/action-send-mail@v1.3.0
         with:
           # mail server settings
           server_address: smtp.gmail.com
@@ -26,7 +26,7 @@ jobs:
           # user credentials
           username: ${{ secrets.EMAIL_USERNAME }}
           password: ${{ secrets.EMAIL_PASSWORD }}
-          # email subject
+        # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
           body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
