@@ -17,7 +17,8 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
       - name: Send success notification to Gmail
-        if: always()      
+        if: always() 
+        uses: actions/checkout@v2
         with:
           # mail server settings
           server_address: smtp.gmail.com
