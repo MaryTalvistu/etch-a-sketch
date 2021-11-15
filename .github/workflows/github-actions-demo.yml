@@ -17,8 +17,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       
       - name: Send success notification to Gmail
-        if: always()
-        uses: dawidd6/action-send-mail@v2          
+        if: always()      
         with:
           # mail server settings
           server_address: smtp.gmail.com
@@ -29,7 +28,7 @@ jobs:
           # email subject
           subject: ${{ github.job }} job of ${{ github.repository }} has ${{ job.status }}
           # email body as text
-          body: ${{ github.job }} job in worflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
+          body: ${{ github.job }} job in workflow ${{ github.workflow }} of ${{ github.repository }} has ${{ job.status }}
           # comma-separated string, send email to
           to: mary-ann.talvistu@khk.ee
           # from email name
